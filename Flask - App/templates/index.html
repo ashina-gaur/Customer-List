@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<H1> Our Customer List : </H1>
+{% for x in queried_users %}
+{{x.name}} - {{x.phone }} - {{x.user_id }} - {{x.date_added}}
+</br>
+{% endfor %}
+{% endblock %}

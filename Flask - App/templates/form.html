@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if name and user_id and phone %}
+<H1>DATA SUBMITTED!!!!</H1>
+{% else %}
+<h1> Enter Customer Details</h1>
+<form method="POST" class="form-control">
+    {{form.hidden_tag()}}
+    {{form.name.label()}}
+    <br/>
+    {{form.name()}}
+    <br/>
+    {{form.phone.label()}}
+    <br/>
+    {{form.phone()}}
+    <br/>
+    {{form.user_id.label()}}
+    <br/>
+    {{form.user_id()}}
+    <br/>
+    {{form.submit()}}
+
+</form>
+{% endif %}
+{% endblock %}
